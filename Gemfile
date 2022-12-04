@@ -48,5 +48,5 @@ end
 
 gem "byebug"
 
-gem "active_record_serializers"
+gem "active_model_serializers"
 
