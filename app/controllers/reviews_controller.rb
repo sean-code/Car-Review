@@ -21,6 +21,7 @@ class ReviewsController < ApplicationController
             render json: @review, status: :created 
         else 
             render json: {error: "Review Not Updated"}, status: :unprocessable_entity
+        end
     end
 
     #PATCH & PUT
@@ -30,6 +31,7 @@ class ReviewsController < ApplicationController
             render json: @review, status: :ok
         else 
             render json: {error: "Not Updated"}, status: :unprocessable_entity
+        end
     end
 
     private 
