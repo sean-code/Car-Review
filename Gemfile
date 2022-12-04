@@ -46,7 +46,11 @@ group :development do
   # gem "spring"
 end
 
+#byebug gem
 gem "byebug"
-
+# Serializer gem
 gem "active_model_serializers"
+
+#faker gem
+gem "faker"
 
