@@ -1,10 +1,10 @@
 class CreateReviews < ActiveRecord::Migration[7.0]
   def change
     create_table :reviews do |t|
-      t.string :author
+      t.string :username
       t.integer :rating
       t.string :comment
-      t.integer :car_id
+      t.belongs_to :car, null: false, foreign_key: true
 
       t.timestamps
     end
