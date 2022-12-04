@@ -32,7 +32,6 @@ class ReviewsController < ApplicationController
             render json: {error: "Not Updated"}, status: :unprocessable_entity
     end
 
-
     private 
     def set_review
         review = Review.find_by(id: params[:id])
@@ -41,7 +40,5 @@ class ReviewsController < ApplicationController
     def review_params 
         params.require(:review).permit(:username, :rating, :comment)
     end
-
-
 
 end
