@@ -34,6 +34,11 @@ class ReviewsController < ApplicationController
         end
     end
 
+    def destroy 
+        set_review.destroy
+        head :no_content
+    end
+
     private 
     def set_review
         review = Review.find_by(id: params[:id])
