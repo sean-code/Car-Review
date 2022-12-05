@@ -1,5 +1,6 @@
 class UserController < ApplicationController
     before_action :authorize, only: [:show]
+
     def create
         user = User.create(user_params)
         if user.valid?
@@ -14,7 +15,6 @@ class UserController < ApplicationController
         user = User.find_by(id: session[:user_id])
         render json: user
     end
-
 
     private
 
