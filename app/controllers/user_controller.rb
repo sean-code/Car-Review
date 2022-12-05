@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-    
+    before_action :authorize, only: [:show]
     def create
         user = User.create(user_params)
         if user.valid?
