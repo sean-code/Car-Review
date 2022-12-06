@@ -1,4 +1,4 @@
 class Car < ApplicationRecord
     has_many :reviews
-    # belongs_to :car
+    belongs_to :user
 end
