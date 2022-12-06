@@ -25,11 +25,13 @@ carArray = [
     "https://images.unsplash.com/photo-1525264626954-d57032a1ab1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Tmlzc2FuJTIwQ2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "https://images.unsplash.com/photo-1531920327645-347e96a7f31e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fE5pc3NhbiUyMENhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     "https://images.unsplash.com/photo-1610915504025-d806f0041582?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fEZvcmQlMjBjYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fEZvcmQlMjBjYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+    "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fEZvcmQlMjBjYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1667297413691-6a07f6127ce0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fEJ1aWNrJTIwQ2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1459603677915-a62079ffd002?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8TGluY29sbiUyME1LUyUyMENhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
 ]
 
 #Make 25 Random Cars
-25.times do
+10.times do
     makeModel = Faker::Vehicle.make_and_model #=> "Honda CR-V"
     array = makeModel.split(" ")
     make = array[0]
@@ -45,7 +47,7 @@ carArray = [
         engine_size: Faker::Vehicle.engine_size, year: Faker::Vehicle.year, image: carArray.sample)
 
 
-    2.times do
+    15.times do
         rev1 = Review.create(username: Faker::Twitter.screen_name, rating: Faker::Number.within(range: 2..5), comment: Faker::Lorem.paragraph(sentence_count: 3), car: car1)
     end
 end
