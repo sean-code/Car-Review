@@ -54,3 +54,6 @@ gem "active_model_serializers"
 #faker gem
 gem "faker"
 
+#bcrypt
+gem 'bcrypt-ruby', '~> 3.1.2'
+
