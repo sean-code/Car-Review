@@ -1,8 +1,7 @@
 class ReviewsController < ApplicationController
     #All Cars
     def index 
-        @reviews=Review.all
-        render json: @reviews, status: :ok
+        render json: Review.all, status: :ok
     end
     
     #GET /cars/ 1

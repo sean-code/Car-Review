@@ -1,7 +1,8 @@
 class CarsController < ApplicationController
     #All Cars
     def index 
-        render json: Car.all, except: [:created_at, :updated_at], status: :ok
+        car = Car.all
+        render json: car, except: [:created_at, :updated_at], status: :ok
     end
 
     #GET /cars/ 1
