@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+    # before_action :authorize
     #All Cars
     def index 
         render json: Review.all, status: :ok
