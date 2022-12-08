@@ -15,7 +15,5 @@ services:
       - key: RAILS_MASTER_KEY
         sync: false
 
--type: redis
- plan: free
- maxmemoryPolicy: noeviction
+
 
