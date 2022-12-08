@@ -1,11 +1,11 @@
 class ReviewsController < ApplicationController
-    # before_action :authorize
-    #All Cars
+    # before_action :authorized
+    #All
     def index 
         render json: Review.all, status: :ok
     end
     
-    #GET /cars/ 1
+    #GET
     def show 
         if set_review
             render json: set_review, status: :ok

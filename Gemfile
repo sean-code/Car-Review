@@ -3,11 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.4"
 
+gem "sqlite3"
+
+# gem "pg"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
-# Use sqlite3 as the database for Active Record
-gem "pg"
+# Use postgres as the database for Active Record
+# gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -57,3 +61,5 @@ gem "faker"
 #bcrypt
 gem 'bcrypt', '~> 3.1.2'
 
+#pry
+gem "pry"

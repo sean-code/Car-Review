@@ -1,5 +1,4 @@
 class CarsController < ApplicationController
-    before_action :authorize
 
     #All Cars
     def index 
@@ -38,11 +37,11 @@ class CarsController < ApplicationController
         end
     end
 
-    # #DELETE
-    # def destroy 
-    #     set_car.destroy
-    #     head :no_content
-    # end
+    #DELETE
+    def destroy 
+        set_car.destroy
+        head :no_content
+    end
 
     
 
@@ -61,3 +60,4 @@ class CarsController < ApplicationController
     end
 
 end
+

@@ -17,9 +17,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_04_102259) do
     t.string "model"
     t.string "fuel_type"
     t.string "transmission"
-    t.integer "mileage"
-    t.integer "engine_size"
-    t.integer "year"
+    t.string "mileage"
+    t.string "engine_size"
+    t.string "year"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
